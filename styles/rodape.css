@@ -1,0 +1,10 @@
+hr {
+    margin: 0;
+}
+
+.rodape {
+    background-color: var(--cor-secundaria);
+    padding: 1em;
+    font-family: var(--fonte-secundaria);
+    font-size: 16px;
+}

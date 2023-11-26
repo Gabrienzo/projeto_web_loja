@@ -1,0 +1,52 @@
+.shop {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gameCard {
+    background-color: var(--cor-card);
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    border-radius: 20px;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.cardImage {
+    margin-right: 0.5em;
+}
+
+.gameName,
+.gameDesc {
+    font-size: 16px;
+    margin-bottom: 0.5em;
+}
+
+
+.gameDesc_long,
+.cardTags {
+    font-size: 13px;
+}
+
+.preco {
+    font-family: var(--fonte-principal);
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 0.5em;
+}
+
+.cardTop, 
+.cardBotton,
+.cardBuy {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardBuy {
+    align-items: center;
+}
+
+.cardBuy {
+    text-decoration: none;
+}

@@ -1,0 +1,35 @@
+.perfil_page,
+.perfil,
+.perfil_img,
+.jogos_count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.perfil_page {
+    height: 180vw;
+}
+
+.perfil {
+    background-color: var(--cor-secundaria);
+    margin: 1em 1em 1em 1em;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+.perfil_img {
+    height: 7em;
+    width: 7em;
+    background-color: var(--cor-terciaria);
+    border-radius: 100%;
+}
+
+.perfil_nome {
+    margin: 1em
+}
+
+.jogos_count {
+    flex-direction: row;
+}
