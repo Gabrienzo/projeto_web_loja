@@ -78,3 +78,24 @@
     -webkit-text-fill-color: var(--branco);
     text-decoration: none;
 }
+
+@media screen and (min-width: 1024px) {
+    .biblioteca_titulo {
+        font-size: 2rem;
+    }
+
+    .lista-menu{
+        width: 30vw;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .categorias_biblioteca {
+        border-radius: 20px;
+        margin: 0em 4em;
+    }
+
+    .lista-menu{
+        width: 10vw;
+    }
+}

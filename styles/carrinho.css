@@ -1,3 +1,12 @@
+.corpo_carrinho {
+    background: var(--cor-de-fundo-degrade);
+    background-repeat: no-repeat;
+    font-family: var(--fonte-principal);
+    color: var(--preto);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
 .carrinho_titulo {
     background-color: var(--cor-principal);
     border-radius: 20px;
@@ -79,18 +88,89 @@
     font-weight: 400;
 }
 
-.buttom_voltar_loja {
+.buttom_voltar_loja_container{
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+
+.buttom_voltar_loja {
     background-color: var(--cor-secundaria);
     border-radius: 20px;
     color: var(--preto);
     text-align: center;
+    text-decoration: none;
     margin-left: 0.5em;
     margin-bottom: 1em;
     padding: 1em;
     width: 25%;
     font-size: 1rem;
-    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .carrinho_box {
+        display: flex;
+        justify-content: space-between;
+        height: 100vw;
+    }
+
+    .carrinho_titulo {
+        font-size: 2.25rem;
+    }
+
+    .carrinho {
+        height: 80%;
+        width: 90%;
+        margin: 0.5em 0 0.5em 0.5em;
+        justify-content: flex-start;
+    }
+
+    .pedido_nome,
+    .pedido_preco {
+        font-size: 1.5rem;
+    }
+
+    .carrinho_right {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        margin: 3em 0 0 0;
+    }
+
+    .pedido_checkout {
+        font-size: 2rem;
+    }
+
+    .finalizar_pedido {
+        padding: 0.5em;
+        font-size: 2rem;
+    }
+
+    .buttom_voltar_loja {
+        margin-left: 0;
+        margin-bottom: 1;
+        padding: 1em;
+        width: 8em;
+        font-size: 1.5rem;
+    }
+
+
+}
+
+@media screen and (min-width: 1728px) {
+    .carrinho_left {
+        margin-left: 12em;
+    }
+
+    .carrinho_right {
+        margin-right: 12em;
+    }
+
+    .carrinho {
+        height: 50%;
+    }
+
+    .carrinho_box {
+        height: 50vw;
+    }
 }

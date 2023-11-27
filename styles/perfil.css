@@ -33,3 +33,31 @@
 .jogos_count {
     flex-direction: row;
 }
+
+@media screen and (min-width: 1024px) {
+    .perfil_page {
+        height: 90vw;
+    }
+
+    .perfil {
+        width: 20em;
+        height: 20em;
+    }
+
+    .perfil_img {
+        height: 14em;
+        width: 14em;
+    }
+
+    .perfil_nome,
+    .jogos_count {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+
+    .perfil_page {
+        height: 50vw;
+    }
+}

@@ -12,59 +12,74 @@
         <a href="/html/index.html"><img src="/assets/9EM.svg" alt="Logo da 9EM" class="container__imagem"></a>
     </div>
     <div class="container">
-        <a href="/html/biblioteca.html"><img src="/assets/favoritos.svg" alt="Sua Biblioteca" class="container__imagem container__imagem-transparente"></a>
-        <a href="#" class="container__link">
+        <a href="/html/biblioteca.html" class="container__link"> 
+            <img src="/assets/favoritos.svg" alt="Sua Biblioteca" class="container__imagem">
+            <p class="container__texto">Biblioteca</p>
+        </a>
+        <a href="/html/carrinho.html" class="container__link">
             <img src="/assets/carrinho.svg" alt="Carrinho de compras" class="container__imagem">
             <p class="container__texto">Meu Carrinho</p>
         </a>
-        <a href="/html/login.html"><img src="/assets/perfil.svg" alt="Botão para acessar a pagina de login" class="container__imagem"></a>
+        <a href="/html/login.html" class="container__link">
+            <img src="/assets/perfil.svg" alt="Botão para acessar a pagina de login" class="container__imagem">
+            <p class="container__texto">Perfil</p>
+        </a>
     </div>
 </header>
-<body class="corpo">
-    <h2 class="carrinho_titulo">Seus Pedidos:</h2>
-    <section class="carrinho">
-        <section class="pedido">
-            <img class="pedido_img" src="/assets/capa_carrinho.svg" alt="capa do jogo">
-            <h2 class="pedido_nome">NomeJogoMtLegal</h2>
-            <div class="pedido_preco_container">
-                <h1 class="pedido_preco">R$</h1>
-                <h1 class="pedido_preco" id="pedido_preco">99.99</h1>
-            </div>
-        </section>
-        <section class="pedido">
-            <img class="pedido_img" src="/assets/capa_carrinho.svg" alt="capa do jogo">
-            <h2 class="pedido_nome">NomeJogoMtLegal</h2>
-            <div class="pedido_preco_container">
-                <h1 class="pedido_preco">R$</h1>
-                <h1 class="pedido_preco" id="pedido_preco">99.99</h1>
-            </div>
-        </section>
-        <section class="pedido">
-            <img class="pedido_img" src="/assets/capa_carrinho.svg" alt="capa do jogo">
-            <h2 class="pedido_nome">NomeJogoMtLegal</h2>
-            <div class="pedido_preco_container">
-                <h1 class="pedido_preco">R$</h1>
-                <h1 class="pedido_preco" id="pedido_preco">99.99</h1>
-            </div>
-        </section>
-        <section class="pedido">
-            <img class="pedido_img" src="/assets/capa_carrinho.svg" alt="capa do jogo">
-            <h2 class="pedido_nome">NomeJogoMtLegal</h2>
-            <div class="pedido_preco_container">
-                <h1 class="pedido_preco">R$</h1>
-                <h1 class="pedido_preco" id="pedido_preco">99.99</h1>
-            </div>
-        </section>
-    </section>
-    <div class="pedido_checkout">
-        <h1 class="checkout_nome">Total do pedido: </h1>
-        <div class="checkout_preco">
-            <h1 class="checkout_nome">R$</h1>
-            <h1 class="checkout_nome" id="checkout_valor"> 399.96</h1>
+<body class="corpo_carrinho">
+    <section class="carrinho_box">
+        <div class="carrinho_left">
+            <h2 class="carrinho_titulo">Seus Pedidos:</h2>
+            <section class="carrinho">
+                <section class="pedido">
+                    <img class="pedido_img" src="/assets/capa_carrinho.svg" alt="capa do jogo">
+                    <h2 class="pedido_nome">NomeJogoMtLegal</h2>
+                    <div class="pedido_preco_container">
+                        <h1 class="pedido_preco">R$</h1>
+                        <h1 class="pedido_preco" id="pedido_preco">99.99</h1>
+                    </div>
+                </section>
+                <section class="pedido">
+                    <img class="pedido_img" src="/assets/capa_carrinho.svg" alt="capa do jogo">
+                    <h2 class="pedido_nome">NomeJogoMtLegal</h2>
+                    <div class="pedido_preco_container">
+                        <h1 class="pedido_preco">R$</h1>
+                        <h1 class="pedido_preco" id="pedido_preco">99.99</h1>
+                    </div>
+                </section>
+                <section class="pedido">
+                    <img class="pedido_img" src="/assets/capa_carrinho.svg" alt="capa do jogo">
+                    <h2 class="pedido_nome">NomeJogoMtLegal</h2>
+                    <div class="pedido_preco_container">
+                        <h1 class="pedido_preco">R$</h1>
+                        <h1 class="pedido_preco" id="pedido_preco">99.99</h1>
+                    </div>
+                </section>
+                <section class="pedido">
+                    <img class="pedido_img" src="/assets/capa_carrinho.svg" alt="capa do jogo">
+                    <h2 class="pedido_nome">NomeJogoMtLegal</h2>
+                    <div class="pedido_preco_container">
+                        <h1 class="pedido_preco">R$</h1>
+                        <h1 class="pedido_preco" id="pedido_preco">99.99</h1>
+                    </div>
+                </section>
+            </section>
         </div>
-    </div>
-    <h1 class="finalizar_pedido" id="finalizar_pedido">FINALIZAR COMPRA</h1>
-    <a href="index.html" class="buttom_voltar_loja"><h2>Voltar à loja</h2></a>
+        <div class="carrinho_right">
+            <div class="pedido_checkout">
+                <h1 class="checkout_nome">Total do pedido: </h1>
+                <div class="checkout_preco">
+                    <h1 class="checkout_nome">R$</h1>
+                    <h1 class="checkout_nome" id="checkout_valor"> 399.96</h1>
+                </div>
+            </div>
+            <h1 class="finalizar_pedido" id="finalizar_pedido">FINALIZAR COMPRA</h1>
+            <div class="buttom_voltar_loja_container">
+                <a href="index.html" class="buttom_voltar_loja"><h2>Voltar à loja</h2></a>
+            </div>
+        </div>
+    </section>
+    
 </body>
 <hr/ color="black">
 <footer class="rodape">

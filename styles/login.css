@@ -54,3 +54,59 @@
     text-decoration: none;
 }
 
+@media screen and (min-width: 1024px) {
+    .login_page {
+        height: 90vw;
+    }
+
+    .login {
+        width: 20em;
+        height: 20em;
+    }
+    
+    .login_text_box {
+        border-radius: 20px;
+        border: 2px solid var(--cor-principal);
+        height: 3em;
+        width: 20em;
+        padding: 0.5em;
+    }
+
+    input[type="text"],
+    input[type="password"]{
+        font-size:1rem;
+    }
+    
+    .box_text {
+        font-size: 3rem;
+        margin-bottom: 0.1em;
+    }
+    
+    .button_entrar_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .button_entrar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--cor-principal);
+        border: 2px solid var(--cor-terciaria);
+        border-radius: 20px;
+        color: var(--preto);
+        width: 50%;
+        padding: 0.5em;
+        margin: 1em 0.5em 0 0.5em;
+        font-size: 2.5rem;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+
+    .login_page {
+        height: 50vw;
+    }
+}

@@ -6,5 +6,11 @@ hr {
     background-color: var(--cor-secundaria);
     padding: 1em;
     font-family: var(--fonte-secundaria);
-    font-size: 16px;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .rodape {
+        font-size: 1.5rem;
+    }
 }

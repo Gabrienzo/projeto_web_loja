@@ -9,22 +9,28 @@
 </head>
 <header class="cabecalho">
     <div class="container">
-        <a href="/html/index.html"><img src="/assets/9EM.svg" alt="Logo da 9EM" class="container__imagem"></a>
+        <a href="/html/index.html"><img src="/assets/9EM.svg" alt="Logo da 9EM" class="loja_logo"></a>
     </div>
     <div class="container">
-        <a href="/html/biblioteca.html"><img src="/assets/favoritos.svg" alt="Sua Biblioteca" class="container__imagem container__imagem-transparente"></a>
+        <a href="/html/biblioteca.html" class="container__link"> 
+            <img src="/assets/favoritos.svg" alt="Sua Biblioteca" class="container__imagem">
+            <p class="container__texto">Biblioteca</p>
+        </a>
         <a href="/html/carrinho.html" class="container__link">
             <img src="/assets/carrinho.svg" alt="Carrinho de compras" class="container__imagem">
             <p class="container__texto">Meu Carrinho</p>
         </a>
-        <a href="/html/login.html"><img src="/assets/perfil.svg" alt="Botão para acessar a pagina de login" class="container__imagem"></a>
+        <a href="/html/login.html" class="container__link">
+            <img src="/assets/perfil.svg" alt="Botão para acessar a pagina de login" class="container__imagem">
+            <p class="container__texto">Perfil</p>
+        </a>
     </div>
 </header>
 <body class="corpo">
-    <section class="section_one">
+    <section class="carrossel">
         <h2 class="carrossel__titulo">Mais Vendidos</h2>
         <div class="box-teste">Capa jogo 1</div>
-        <input type="search" class="banner__pesquisa" placeholder="Procure seu jogo aqui!">
+        <div class="banner__pesquisa__container"><input type="search" class="banner__pesquisa" placeholder="Procure seu jogo aqui!"></div>
     </section>
     <section class="categorias">
         <input type="checkbox" id="menu" class="cb__botao">
@@ -51,70 +57,101 @@
         <h1 class="categorias_titulo">Categorias</h1>
     </section>
     <section class="shop">
-        <div class="gameCard">
-            <div class="cardTop">
-                <div class="cardImage"><img src="/assets/capa.svg" alt="capa do jogo"></div>
-                <div class="cardInfos">
-                    <h3 class="gameName">Nome de Jogo Legal</h3>
-                    <h3 class="gameDesc">Descrição:</h3>
-                    <p class="gameDesc_long">Lorem ipsum dolor sit amet, conser 
-                        adipiscing elit. Etiam ut pulvinar nisi, 
-                        vitae. Maecenas euismod, nisl quis 
-                        commodo tempor, augue nulla.</p>
+        <ul class="shop_list">
+            <li class="shop_item" id="shop_item">
+                <div class="gameCard" id="gameCard">
+                    <div class="cardTop">
+                        <div class="cardImage"><img src="/assets/capa.svg" alt="capa do jogo"></div>
+                        <div class="cardInfos">
+                            <h3 class="gameName">Nome de Jogo Legal</h3>
+                            <h3 class="gameDesc">Descrição:</h3>
+                            <p class="gameDesc_long">Lorem ipsum dolor sit amet, conser 
+                                adipiscing elit. Etiam ut pulvinar nisi, 
+                                vitae. Maecenas euismod, nisl quis 
+                                commodo tempor, augue nulla.</p>
+                        </div>
+                    </div>
+                    <div class="cardBotton">
+                        <p class="cardTags">Tag, tag, tag, tag, tag</p>
+                        <div class="cardBuy">
+                            <h3 class="preco"> R$ 99,99</h3>
+                            <a href="#"><img class="buyButton" src="/assets/buyButton.svg" alt="botão de adicionar ao carrinho, um carrinho de compras verde"></a>
+                        </div>
+                        
+                    </div>
                 </div>
-            </div>
-            <div class="cardBotton">
-                <p class="cardTags">Tag, tag, tag, tag, tag</p>
-                <div class="cardBuy">
-                    <h3 class="preco"> R$ 99,99</h3>
-                    <a href="#"><img class="buyButton" src="/assets/buyButton.svg" alt="botão de adicionar ao carrinho, um carrinho de compras verde"></a>
+            </li>
+            <li class="shop_item" id="shop_item">
+                <div class="gameCard" id="gameCard">
+                    <div class="cardTop">
+                        <div class="cardImage"><img src="/assets/capa.svg" alt="capa do jogo"></div>
+                        <div class="cardInfos">
+                            <h3 class="gameName">Nome de Jogo Legal</h3>
+                            <h3 class="gameDesc">Descrição:</h3>
+                            <p class="gameDesc_long">Lorem ipsum dolor sit amet, conser 
+                                adipiscing elit. Etiam ut pulvinar nisi, 
+                                vitae. Maecenas euismod, nisl quis 
+                                commodo tempor, augue nulla.</p>
+                        </div>
+                    </div>
+                    <div class="cardBotton">
+                        <p class="cardTags">Tag, tag, tag, tag, tag</p>
+                        <div class="cardBuy">
+                            <h3 class="preco"> R$ 99,99</h3>
+                            <a href="#"><img class="buyButton" src="/assets/buyButton.svg" alt="botão de adicionar ao carrinho, um carrinho de compras verde"></a>
+                        </div>
+                        
+                    </div>
                 </div>
-                
-            </div>
-        </div>
-        <div class="gameCard">
-            <div class="cardTop">
-                <div class="cardImage"><img src="/assets/capa.svg" alt="capa do jogo"></div>
-                <div class="cardInfos">
-                    <h3 class="gameName">Nome de Jogo Legal</h3>
-                    <h3 class="gameDesc">Descrição:</h3>
-                    <p class="gameDesc_long">Lorem ipsum dolor sit amet, conser 
-                        adipiscing elit. Etiam ut pulvinar nisi, 
-                        vitae. Maecenas euismod, nisl quis 
-                        commodo tempor, augue nulla.</p>
+            </li>
+            <li class="shop_item" id="shop_item">
+                <div class="gameCard" id="gameCard">
+                    <div class="cardTop">
+                        <div class="cardImage"><img src="/assets/capa.svg" alt="capa do jogo"></div>
+                        <div class="cardInfos">
+                            <h3 class="gameName">Nome de Jogo Legal</h3>
+                            <h3 class="gameDesc">Descrição:</h3>
+                            <p class="gameDesc_long">Lorem ipsum dolor sit amet, conser 
+                                adipiscing elit. Etiam ut pulvinar nisi, 
+                                vitae. Maecenas euismod, nisl quis 
+                                commodo tempor, augue nulla.</p>
+                        </div>
+                    </div>
+                    <div class="cardBotton">
+                        <p class="cardTags">Tag, tag, tag, tag, tag</p>
+                        <div class="cardBuy">
+                            <h3 class="preco"> R$ 99,99</h3>
+                            <a href="#"><img class="buyButton" src="/assets/buyButton.svg" alt="botão de adicionar ao carrinho, um carrinho de compras verde"></a>
+                        </div>
+                        
+                    </div>
                 </div>
-            </div>
-            <div class="cardBotton">
-                <p class="cardTags">Tag, tag, tag, tag, tag</p>
-                <div class="cardBuy">
-                    <h3 class="preco"> R$ 99,99</h3>
-                    <a href="#"><img class="buyButton" src="/assets/buyButton.svg" alt="botão de adicionar ao carrinho, um carrinho de compras verde"></a>
+            </li>
+            <li class="shop_item" id="shop_item">
+                <div class="gameCard" id="gameCard">
+                    <div class="cardTop">
+                        <div class="cardImage"><img src="/assets/capa.svg" alt="capa do jogo"></div>
+                        <div class="cardInfos">
+                            <h3 class="gameName">Nome de Jogo Legal</h3>
+                            <h3 class="gameDesc">Descrição:</h3>
+                            <p class="gameDesc_long">Lorem ipsum dolor sit amet, conser 
+                                adipiscing elit. Etiam ut pulvinar nisi, 
+                                vitae. Maecenas euismod, nisl quis 
+                                commodo tempor, augue nulla.</p>
+                        </div>
+                    </div>
+                    <div class="cardBotton">
+                        <p class="cardTags">Tag, tag, tag, tag, tag</p>
+                        <div class="cardBuy">
+                            <h3 class="preco"> R$ 99,99</h3>
+                            <a href="#"><img class="buyButton" src="/assets/buyButton.svg" alt="botão de adicionar ao carrinho, um carrinho de compras verde"></a>
+                        </div>
+                        
+                    </div>
                 </div>
-                
-            </div>
-        </div>
-        <div class="gameCard">
-            <div class="cardTop">
-                <div class="cardImage"><img src="/assets/capa.svg" alt="capa do jogo"></div>
-                <div class="cardInfos">
-                    <h3 class="gameName">Nome de Jogo Legal</h3>
-                    <h3 class="gameDesc">Descrição:</h3>
-                    <p class="gameDesc_long">Lorem ipsum dolor sit amet, conser 
-                        adipiscing elit. Etiam ut pulvinar nisi, 
-                        vitae. Maecenas euismod, nisl quis 
-                        commodo tempor, augue nulla.</p>
-                </div>
-            </div>
-            <div class="cardBotton">
-                <p class="cardTags">Tag, tag, tag, tag, tag</p>
-                <div class="cardBuy">
-                    <h3 class="preco"> R$ 99,99</h3>
-                    <a href="#"><img class="buyButton" src="/assets/buyButton.svg" alt="botão de adicionar ao carrinho, um carrinho de compras verde"></a>
-                </div>
-                
-            </div>
-        </div>
-
+            </li>
+        </ul>
+        
     </section>
     
     
