@@ -1,0 +1,103 @@
+.shop {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gameCard {
+    background-color: var(--cor-card);
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    border-radius: 20px;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.cardImage {
+    margin-right: 0.5em;
+}
+
+.gameNameS,
+.gameDescS {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+.gameNameS {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.gameDesc_long,
+.cardTags {
+    font-size: 0.5rem;
+    width: 50%;
+}
+
+.preco {
+    font-family: var(--fonte-principal);
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 0.5em;
+}
+
+.cardTop, 
+.cardBotton,
+.cardBuy {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardBuy {
+    align-items: center;
+}
+.preco_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardBuy {
+    text-decoration: none;
+}
+
+.buyButton_container {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+@media screen and (min-width: 1024px) {
+    .shop_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gameCard {
+        width: 18em;
+        height: 9em;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .shop_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0em 4em;
+    }
+
+    .gameCard {
+        width: 18em;
+        height: 11em;
+    }
+
+    .gameDesc_long {
+        font-size: 0.3rem;
+        width: 100%;
+    }
+}

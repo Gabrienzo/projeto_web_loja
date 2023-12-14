@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9EM - Carrinho</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<header class="cabecalho">
+    <div class="container">
+        <a href="/"> 
+            <img src="assets/9EM.svg" alt="Logo da 9EM" class="loja_logo">
+        </a>
+    </div>
+    <div class="container">
+        <a href="/biblioteca" class="container__link"> 
+            <img src="assets/favoritos.svg" alt="Sua Biblioteca" class="container__imagem">
+            <p class="container__texto">Biblioteca</p>
+        </a>
+        <a href="/cart" class="container__link">
+            <img src="assets/carrinho.svg" alt="Carrinho de compras" class="container__imagem">
+            <p class="container__texto">Meu Carrinho</p>
+        </a>
+        <a href="/login" class="container__link">
+            <img src="assets/perfil.svg" alt="Botão para acessar a pagina de login" class="container__imagem">
+            <p class="container__texto">Perfil</p>
+        </a>
+    </div>
+</header>
+<body class="corpo_carrinho">
+    <section class="carrinho_box">
+        <div class="carrinho_left">
+            <h2 class="carrinho_titulo">Seus Pedidos:</h2>
+            <section class="carrinho">
+                <ul class="carrinho_list">
+                    <% cart.forEach(function(item) { %>
+
+                    <li class="carrinho_item" id="carrinho_item">
+                        <section class="pedido">
+                            <img class="pedido_img" src="assets/<%= item.image %>" alt="capa do jogo">
+                            <h2 class="pedido_nome"><%= item.name %></h2>
+                            <div class="pedido_preco_container">
+                                <% if(item.sale_price){ %>
+                                    <h1 class="pedido_preco" style="text-decoration:line-through; color: red;"><%= item.price %></h1>
+                                    <h1 class="pedido_preco">R$<%= item.sale_price %></h1>
+                                <% }else{ %>
+                                    <h1 class="pedido_preco" id="pedido_preco">R$<%= item.price %></h1>
+                                <% } %>
+                                <form method="post" action="/remove_product">
+                                    <input type="hidden" name="id" value="<%= item.id %>">
+                                    <input type="submit" name="remover_item" class="remover_item" value="Excluir">
+                                </form>
+                            </div>
+                        </section>
+                    </li>
+
+                    <% }) %>
+                </ul>
+            </section>
+        </div>
+
+        <div class="carrinho_right">
+            <div class="pedido_checkout">
+                <h1 class="checkout_nome">Total do pedido: </h1>
+                <div class="checkout_preco">
+                    <h1 class="checkout_nome">R$<%=total%></h1>
+                </div>
+            </div>
+            <div class="checkout_order">
+                <form method="post" action="/checkout">
+                    <input type="hidden" id="ids_jogos" name="ids_jogos" value="[1, 2, 3]">
+                    <button type="submit" class="finalizar_pedido">Finalizar Compra</button>
+                </form>
+            </div>
+            <div class="buttom_voltar_loja_container">
+                <a href="/" class="buttom_voltar_loja"><h2>Voltar à loja</h2></a>
+            </div>
+        </div>
+
+    </section>
+    
+</body>
+<hr/ color="black">
+<footer class="rodape">
+    
+    <h2 class="rodape_titulo"> Fale Conosco</h2>
+
+</footer>
+</html>

@@ -1,0 +1,53 @@
+<!---MODELO BASE--->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9EM - perfil</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+</head>
+<header class="cabecalho">
+    <div class="container">
+        <a href="/"> 
+            <img src="/assets/9EM.svg" alt="Logo da 9EM" class="loja_logo">
+        </a>
+    </div>
+    <div class="container">
+        <a href="/biblioteca" class="container__link"> 
+            <img src="/assets/favoritos.svg" alt="Sua Biblioteca" class="container__imagem">
+            <p class="container__texto">Biblioteca</p>
+        </a>
+        <a href="/cart" class="container__link">
+            <img src="/assets/carrinho.svg" alt="Carrinho de compras" class="container__imagem">
+            <p class="container__texto">Meu Carrinho</p>
+        </a>
+        <a href="/login" class="container__link">
+            <img src="/assets/perfil.svg" alt="Botão para acessar a pagina de login" class="container__imagem">
+            <p class="container__texto">Perfil</p>
+        </a>
+    </div>
+</header>
+<body class="corpo">
+    <section class="perfil_page">
+        <section class="perfil">
+            <div class="perfil_img"><p><%= usuario.foto %></p></div>
+            <h1 class="perfil_nome"><%= usuario.login%></h1>
+            <div class="jogos_count">
+                <h2>Jogos: </h2>
+                <h2 id="jogos_count"><%= usuario.jogos_total%></h2>
+            </div>
+            <form action="/logout" method="get">
+                <button type="submit" class="button_entrar" style="color: red;">Logout</button>
+             </form>
+        </section>
+    </section>
+</body>
+<hr/ color="black">
+<footer class="rodape">
+    
+    <h2 class="rodape_titulo"> Fale Conosco</h2>
+
+</footer>
+</html>

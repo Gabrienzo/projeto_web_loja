@@ -1,0 +1,112 @@
+.gameCard_biblioteca {
+    background-color: var(--cor-card);
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    border-radius: 20px;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.cardImage {
+    margin-right: 0.5em;
+}
+
+.gameName,
+.gameDesc {
+    margin-bottom: 0.5em;
+}
+
+.gameName {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.gameDesc {
+    font-size: 1rem;
+}
+
+
+.gameDesc_long,
+.cardTags {
+    font-size: 13px;
+}
+
+.preco {
+    font-family: var(--fonte-principal);
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 0.5em;
+}
+
+.cardTop, 
+.cardBotton,
+.cardBuy {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cardBuy {
+    align-items: center;
+}
+
+.pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+.page_text,
+.page_skipper {
+    font-family: var(--fonte-principal);
+    font-size: 24px;
+    color: var(--branco);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.page_skipper {
+    margin: 0em 0.5em 0em 0.5em;
+    font-size: 48px;
+}
+
+@media screen and (min-width: 1024px) {
+    .biblioteca_box {
+        height: 80vw;
+    }
+
+    .gameCard_biblioteca {
+        margin: 1em 2em 1em 2em;
+    }
+
+    .gameName {
+        font-size: 3rem;
+    }
+
+    .gameDesc {
+        font-size: 1.5rem;
+    }
+
+    .gameDesc_long {
+        font-size: 1.2rem;
+    }
+
+    .page_text {
+        font-size: 2rem;
+    }
+
+    .page_skipper {
+        font-size: 4rem;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .gameCard_biblioteca {
+        margin: 0.5em 6em;
+    }
+
+    .cardImage {
+        margin-right: 1em;
+    }
+}

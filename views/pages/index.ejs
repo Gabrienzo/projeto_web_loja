@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9EM</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<header class="cabecalho">
+    <div class="container">
+        <a href="/"> 
+            <img src="assets/9EM.svg" alt="Logo da 9EM" class="loja_logo">
+        </a>
+    </div>
+    <div class="container">
+        <a href="/biblioteca" class="container__link"> 
+            <img src="assets/favoritos.svg" alt="Sua Biblioteca" class="container__imagem">
+            <p class="container__texto">Biblioteca</p>
+        </a>
+        <a href="/cart" class="container__link">
+            <img src="assets/carrinho.svg" alt="Carrinho de compras" class="container__imagem">
+            <p class="container__texto">Meu Carrinho</p>
+        </a>
+        <a href="/login" class="container__link">
+            <img src="assets/perfil.svg" alt="Botão para acessar a pagina de login" class="container__imagem">
+            <p class="container__texto">Perfil</p>
+        </a>
+    </div>
+</header>
+<body class="corpo">
+    <% if (compraConcluida) { %>
+        <script>alert("Compra efetuada com sucesso! Verifique sua biblioteca.")</script>
+    <% } %>
+    <% if(produtoRepetido) { %>
+        <script>alert("Compra não efetuada, verifique se você não ja possui os itens adicionados...")</script>
+    <% } %>
+    <% if (adicionadoCarrinho) { %>
+        <script>alert("Item adicionado ao carrinho!")</script>
+    <% } %>
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Mais Vendidos</h2>
+        <div class="box-teste">Capa jogo 1</div>
+        <div class="banner__pesquisa__container"><input type="search" class="banner__pesquisa" placeholder="Procure seu jogo aqui!"></div>
+    </section>
+    <section class="categorias">
+        <input type="checkbox" id="menu" class="cb__botao">
+        <label for="menu" class="cb__rotulo">
+            <span class="categoria__menu-hamburguer cb__imagem"></span>
+        </label>
+        <ul class="lista-menu">
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Ação</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Aventura</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">Estratégia</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">FPS</a>
+            </li>
+            <li class="lista-menu__item">
+                <a href="#" class="lista-menu__link">RPG</a>
+            </li>
+        </ul>
+        <h1 class="categorias_titulo">Categorias</h1>
+    </section>
+    <section class="shop">
+        <ul class="shop_list">
+            <% result.forEach(function(item) { %>
+            <li class="shop_item" id="shop_item">
+                <div class="gameCard" id="gameCard">
+                    <div class="cardTop">
+                        <div class="cardImage"><img src="assets/<%= item.image %>" alt="capa do jogo"></div>
+                        <div class="cardInfos">
+                            <h3 class="gameNameS"><%= item.name %></h3>
+                            <h3 class="gameDescS">Descrição:</h3>
+                            <p class="gameDesc_long"><%= item.description %></p>
+                        </div>
+                    </div>
+                    <div class="cardBotton">
+                        <p class="cardTags"><%= item.tags %></p>
+                        <div class="cardBuy">
+                            <div class="preco_container">
+                                <% if(item.sale_price){ %>
+                                    <h3 style="text-decoration:line-through; color: red;" class="preco"><%= item.price %></h3>
+                                    <h3 style="color: greenyellow;" class="preco">R$ <%= item.sale_price %></h3>
+                                <% }else{ %>
+                                    <h3 class="preco"> R$ <%= item.price %></h3>
+                                <% } %>
+                            </div>
+
+                            <form action="/add_to_cart" method="post">
+                                <input type="hidden" name="id" value="<%= item.id %>">
+                                <input type="hidden" name="name" value="<%= item.name %>">
+                                <input type="hidden" name="price" value="<%= item.price %>">
+                                <input type="hidden" name="sale_price" value="<%= item.sale_price %>">
+                                <input type="hidden" name="image" value="<%= item.image %>">
+                                <button type="submit" class="buyButton_container">
+                                    <img class="buyButton" src="assets/buyButton.svg" border="0" alt="um botão com um carrinho de compras verde que adiciona o item ao seu carrinho">
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <% }) %>
+        </ul>
+    </section>
+    
+    
+</body>
+<hr/ color="black">
+<footer class="rodape">
+    
+    <h2 class="rodape_titulo"> Fale Conosco</h2>
+
+</footer>
+<pages>

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins&display=swap');
+@import url(header.css);
+@import url(carrossel.css);
+@import url(categorias.css);
+@import url(rodape.css);
+@import url(shop.css);
+@import url(categorias_biblioteca.css);
+@import url(biblioteca.css);
+@import url(carrinho.css);
+@import url(login.css);
+@import url(perfil.css);
+@import url(cadastro.css);
+
+:root {
+    --cor-de-fundo-degrade: linear-gradient(180deg, #080412 0%, #183D3D 100%);
+    --cor-principal: #5C8374;
+    --cor-secundaria: #93B1A6;
+    --cor-terciaria: #183D3D;
+    --cor-card: #040D12;
+    --preto: #000000;
+    --branco: #ffffff;
+
+    --fonte-principal: "Lilita One";
+    --fonte-secundaria: "Poppins";
+}
+
+.corpo {
+    background: var(--cor-de-fundo-degrade);
+    background-repeat: no-repeat;
+    font-family: var(--fonte-principal);
+    color: var(--preto);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
